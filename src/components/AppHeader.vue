@@ -2,6 +2,50 @@
 export default {
     data() {
         return {
+            menu: [
+                {
+                    title: "CHARACTERS",
+                    isActive: true,
+                },
+                {
+                    title: "COMICS",
+                    isActive: false,
+                },
+                {
+                    title: "MOVIES",
+                    isActive: false,
+                },
+                {
+                    title: "TV",
+                    isActive: false,
+                },
+                {
+                    title: "GAMES",
+                    isActive: false,
+                },
+                {
+                    title: "COLLECTIBLES",
+                    isActive: false,
+                },
+                {
+                    title: "VIDEOS",
+                    isActive: false,
+                },
+                {
+                    title: "FANS",
+                    isActive: false,
+                },
+                {
+                    title: "NEWS",
+                    isActive: false,
+                },
+                {
+                    title: "SHOP",
+                    isActive: false,
+                },
+            ]
+
+
 
         }
     }
@@ -14,18 +58,11 @@ export default {
         <div class="header-logo">
             <img class="img-logo" src="../assets/img/dc-logo.png" alt="Logo DC">
         </div>
-        <div class="text">
-            <ul>
-                <li><a href="">CHARACTERS</a></li>
-                <li><a href="">COMICS</a></li>
-                <li><a href="">MOVIES</a></li>
-                <li><a href="">TV</a></li>
-                <li><a href="">GAMES</a></li>
-                <li><a href="">COLLECTIBLES</a></li>
-                <li><a href="">VIDEOS</a></li>
-                <li><a href="">FANS</a></li>
-                <li><a href="">NEWS</a></li>
-                <li><a href="">SHOP</a></li>
+        <div>
+            <ul class="navigation">
+                <li v-for="item in menu">
+                    <a href="" :class="{ 'active': item.isActive }">{{ item.title }}</a>
+                </li>
             </ul>
         </div>
     </header>
@@ -51,15 +88,21 @@ export default {
         margin-top: 20px;
 
         a {
-            padding: 9px 16px;
+            font-weight: 530;
+            padding: 6px 16px 20px ;
             text-decoration: none;
             color: black;
             display: inline-block;
 
             &:hover {
                 color: $primary-color;
+                border-bottom: 4px solid;
                 // text-decoration: underline;
             }
+
+            // &.active {
+            //     background-color: $primary-color;
+            // }
         }
     }
 }
