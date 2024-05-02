@@ -54,18 +54,24 @@ export default {
 
 <template>
 
-    <header class="header-nav">
-        <div class="header-logo">
-            <img class="img-logo" src="../assets/img/dc-logo.png" alt="Logo DC">
-        </div>
-        <div>
-            <ul class="navigation">
-                <li v-for="item in menu">
-                    <a href="" :class="{ 'active': item.isActive }">{{ item.title }}</a>
-                </li>
-            </ul>
-        </div>
+
+    <header>
+        
+            <div class="header-nav">
+                <div class="header-logo">
+                    <img class="img-logo" src="../assets/img/dc-logo.png" alt="Logo DC">
+                </div>
+                <div>
+                    <ul class="navigation">
+                        <li v-for="item in menu">
+                            <a href="" :class="{ 'active': item.isActive }">{{ item.title }}</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+      
     </header>
+
 
 
 </template>
@@ -79,20 +85,21 @@ export default {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 40px;
+    padding: 10px 20px;
+    width: 80%;
+    margin: 0 auto;
 
     ul {
         @include flex(row, center, center);
         list-style-type: none;
-        gap: 0.5rem;
-        margin-top: 20px;
+        gap: 1rem;
 
         a {
-            font-weight: 530;
-            padding: 6px 16px 20px ;
+            font-weight: 540;
             text-decoration: none;
             color: black;
             display: inline-block;
+            padding-bottom: 20px;
 
             &:hover {
                 color: $primary-color;
@@ -106,4 +113,6 @@ export default {
         }
     }
 }
+
+
 </style>
