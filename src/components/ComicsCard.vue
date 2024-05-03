@@ -11,17 +11,21 @@ export default {
 <template>
   <div class="card">
     <img :src="cardImage" :alt="cardTitle">
-    <h4>{{ cardTitle }}</h4>
+    <h5>{{ cardTitle }}</h5>
   </div>
 </template>
 
 <style scoped lang="scss">
 .card {
-  padding: 1rem;
-  background-color: white;
+  padding: 1rem 0.5rem 1rem 0;
+  // background-color: white;
 
   img {
-    max-width: 100%;
+    // max-width: 100%;
+
+    height: 200px;
+
+
   }
 }
 </style>

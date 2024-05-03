@@ -91,9 +91,9 @@ export default {
     <main class="main-dc">
         <div class="container-dc">
             <div class="row">
-               <div class="col" v-for="comics in cards">
-                   <ComicsCard :cardImage="comics.thumb" :cardTitle="comics.series"/>
-               </div> 
+                <div class="col" v-for="comic in cards">
+                    <ComicsCard :cardImage="comic.thumb" :cardTitle="comic.series" />
+                </div>
             </div>
         </div>
 
@@ -103,9 +103,11 @@ export default {
 </template>
 
 <style scoped lang="scss">
+@use"../style/partials/mixins" as *;
+
 .main-dc {
     color: white;
-    font-size: bold;
+    font-size: 200;
     background-color: black;
 }
 
@@ -113,5 +115,19 @@ export default {
     padding: 10px 20px;
     width: 80%;
     margin: 0 auto;
+
+    // @include flex(row, center, center);
+
+    .row {
+        @include flex(row, space-around, stretch, wrap);
+
+        .col{
+            width: 15%;
+            margin-bottom: 1rem;
+
+           
+        }
+    }
+
 }
 </style>
