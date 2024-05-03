@@ -82,11 +82,7 @@ section {
                     padding-left: 12px;
                 }
             }
-
-
         }
     }
-
-
 }
 </style>

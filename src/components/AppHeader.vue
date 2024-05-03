@@ -101,7 +101,6 @@ export default {
                 a {
                     color: $primary-color;
                 }
-
             }
 
             a {
@@ -116,8 +115,6 @@ export default {
                     border-bottom: 4px solid;
                     // text-decoration: underline;
                 }
-
-
             }
         }
     }

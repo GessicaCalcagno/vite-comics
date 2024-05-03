@@ -78,7 +78,7 @@ export default {
 
         </div>
     </footer>
-    
+
     <!-- _______________________________ -->
     <footer class="footer-bottom">
         <div class="container-footer-bottom">
@@ -120,7 +120,7 @@ export default {
     // background-repeat: no-repeat;
     overflow: hidden;
     font-size: 0.8rem;
-   
+
 
 
     h4 {
@@ -188,7 +188,5 @@ export default {
         padding: 10px;
         border-color: $primary-color;
     }
-
-
 }
 </style>

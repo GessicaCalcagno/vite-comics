@@ -95,6 +95,9 @@ export default {
                     <ComicsCard :cardImage="comic.thumb" :cardTitle="comic.series" />
                 </div>
             </div>
+            <div class="div-btn">
+                <span class="main-button"><a href="">LOAD MORE</a></span>
+            </div>
         </div>
 
     </main>
@@ -104,11 +107,13 @@ export default {
 
 <style scoped lang="scss">
 @use"../style/partials/mixins" as *;
+@use"../style/partials/variables" as *;
 
 .main-dc {
     color: white;
     font-size: 200;
     background-color: black;
+    padding-top: 40px;
 }
 
 .container-dc {
@@ -121,13 +126,28 @@ export default {
     .row {
         @include flex(row, space-around, stretch, wrap);
 
-        .col{
+        .col {
             width: 15%;
             margin-bottom: 1rem;
-
-           
         }
     }
+}
 
+.div-btn {
+    text-align: center;
+    padding-bottom: 20px;
+
+    .main-button {
+        background-color: $primary-color;
+        padding: 12px 50px;
+        justify-content: center;
+
+        a {
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            font-size: small;
+        }
+    }
 }
 </style>
