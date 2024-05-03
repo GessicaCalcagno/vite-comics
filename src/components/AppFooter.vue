@@ -77,10 +77,9 @@ export default {
             </div>
 
         </div>
-
-
-
     </footer>
+    
+    <!-- _______________________________ -->
     <footer class="footer-bottom">
         <div class="container-footer-bottom">
             <div>
@@ -176,7 +175,6 @@ export default {
             text-decoration: none;
             color: $primary-color;
             font-weight: bold;
-
         }
     }
 

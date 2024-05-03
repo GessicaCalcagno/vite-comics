@@ -5,11 +5,11 @@ export default {
             menu: [
                 {
                     title: "CHARACTERS",
-                    isActive: true,
+                    isActive: false,
                 },
                 {
                     title: "COMICS",
-                    isActive: false,
+                    isActive: true,
                 },
                 {
                     title: "MOVIES",
@@ -56,20 +56,20 @@ export default {
 
 
     <header>
-        
-            <div class="header-nav">
-                <div class="header-logo">
-                    <img class="img-logo" src="../assets/img/dc-logo.png" alt="Logo DC">
-                </div>
-                <div>
-                    <ul class="navigation">
-                        <li v-for="item in menu">
-                            <a href="" :class="{ 'active': item.isActive }">{{ item.title }}</a>
-                        </li>
-                    </ul>
-                </div>
+
+        <div class="header-nav">
+            <div class="header-logo">
+                <img class="img-logo" src="../assets/img/dc-logo.png" alt="Logo DC">
             </div>
-      
+            <div>
+                <ul class="navigation">
+                    <li v-for="item in menu" :class="{ 'active': item.isActive }">
+                        <a href="">{{ item.title }}</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
     </header>
 
 
@@ -85,6 +85,8 @@ export default {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    height: 100px;
+    line-height: 100px;
     padding: 10px 20px;
     width: 80%;
     margin: 0 auto;
@@ -94,25 +96,40 @@ export default {
         list-style-type: none;
         gap: 1rem;
 
-        a {
-            font-weight: 540;
-            text-decoration: none;
-            color: black;
-            display: inline-block;
-            padding-bottom: 20px;
+        li {
+            &.active {
+                a {
+                    color: $primary-color;
+                }
 
-            &:hover {
-                color: $primary-color;
-                border-bottom: 4px solid;
-                // text-decoration: underline;
             }
 
-            // &.active {
-            //     background-color: $primary-color;
-            // }
+            a {
+                font-weight: 540;
+                text-decoration: none;
+                color: black;
+                display: inline-block;
+                // padding-bottom: 10px;
+
+                &:hover {
+                    color: $primary-color;
+                    border-bottom: 4px solid;
+                    // text-decoration: underline;
+                }
+
+
+            }
         }
     }
+
+    .header-logo {
+        display: flex;
+        align-items: center;
+
+        .img-logo {
+            height: 80px;
+        }
+    }
+
 }
-
-
 </style>
