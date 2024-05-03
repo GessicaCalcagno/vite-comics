@@ -120,6 +120,7 @@ export default {
     // background-repeat: no-repeat;
     overflow: hidden;
     font-size: 0.8rem;
+   
 
 
     h4 {
