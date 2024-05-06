@@ -112,7 +112,7 @@ export default {
 
                 &:hover {
                     color: $primary-color;
-                    border-bottom: 4px solid;
+                    border-bottom: 5px solid;
                     // text-decoration: underline;
                 }
             }

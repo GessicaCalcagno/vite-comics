@@ -111,7 +111,6 @@ export default {
 
 .main-dc {
     color: white;
-    font-size: 200;
     background-color: black;
     padding-top: 40px;
 }
@@ -124,12 +123,13 @@ export default {
     // @include flex(row, center, center);
 
     .row {
-        @include flex(row, space-around, stretch, wrap);
+        @include flex(row, space-between, stretch, wrap);
 
         .col {
-            width: 15%;
+            width: calc(100% / 6);
             margin-bottom: 1rem;
         }
+        
     }
 }
 
